@@ -3,45 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
- 
-
 <title>Download File Ready • Secure Download Access</title>
 
  
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
- 
-
 <style>
-
- 
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
  
 
 body{
-  font-family:'Poppins',sans-serif;
-  background:
-    radial-gradient(circle at top,#031b2e,#020617 70%);
+  font-family:Arial,sans-serif;
+  background:radial-gradient(circle at top,#031b2e,#020617 70%);
   height:100vh;
   overflow:hidden;
   display:flex;
   align-items:center;
   justify-content:center;
-  position:relative;
   color:#fff;
 }
-
- 
-
-/* PARTICLES */
 
  
 
@@ -59,22 +39,9 @@ body{
  
 
 @keyframes rise{
-  from{
-    transform:translateY(0);
-    opacity:.8;
-  }
-
- 
-
-  to{
-    transform:translateY(-850px);
-    opacity:0;
-  }
+  from{transform:translateY(0);opacity:.8}
+  to{transform:translateY(-850px);opacity:0}
 }
-
- 
-
-/* GLOW */
 
  
 
@@ -107,36 +74,25 @@ body{
 
  
 
-/* CARD */
-
- 
-
 .card{
   width:390px;
   max-width:92%;
-  padding:2.5rem;
+  padding:38px 28px;
   border-radius:26px;
   text-align:center;
-  background:rgba(15,23,42,.68);
-  backdrop-filter:blur(18px);
-  border:1px solid rgba(56,189,248,.24);
-  box-shadow:
-    0 0 50px rgba(56,189,248,.16),
-    inset 0 0 20px rgba(255,255,255,.03);
+  background:rgba(15,23,42,.72);
+  border:1px solid rgba(56,189,248,.28);
+  box-shadow:0 0 50px rgba(56,189,248,.18);
   position:relative;
   z-index:5;
 }
 
  
 
-/* LOGO */
-
- 
-
 .logo{
-  font-size:2rem;
+  font-size:30px;
   font-weight:700;
-  margin-bottom:5px;
+  margin-bottom:6px;
   color:#38bdf8;
 }
 
@@ -150,13 +106,9 @@ body{
 
 .sub{
   color:#bae6fd;
-  font-size:.88rem;
-  margin-bottom:2rem;
+  font-size:14px;
+  margin-bottom:30px;
 }
-
- 
-
-/* CIRCLE */
 
  
 
@@ -164,7 +116,7 @@ body{
   position:relative;
   width:145px;
   height:145px;
-  margin:0 auto 1.7rem;
+  margin:0 auto 26px;
 }
 
  
@@ -182,9 +134,7 @@ body{
  
 
 @keyframes spin{
-  to{
-    transform:rotate(360deg);
-  }
+  to{transform:rotate(360deg)}
 }
 
  
@@ -195,20 +145,16 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:2rem;
+  font-size:32px;
   font-weight:700;
   color:#e0f2fe;
 }
 
  
 
-/* TEXT */
-
- 
-
 .msg{
-  font-size:.97rem;
-  margin-bottom:1rem;
+  font-size:16px;
+  margin-bottom:16px;
   color:#e2e8f0;
 }
 
@@ -221,49 +167,25 @@ body{
   background:rgba(56,189,248,.12);
   border:1px solid rgba(56,189,248,.28);
   color:#bae6fd;
-  font-size:.82rem;
+  font-size:13px;
   font-weight:600;
 }
 
  
 
-/* FOOT NOTE */
-
- 
-
 .note{
-  margin-top:1.3rem;
-  font-size:.75rem;
+  margin-top:20px;
+  font-size:12px;
   color:#94a3b8;
   line-height:1.7;
 }
 
  
 
-/* MOBILE */
-
- 
-
 @media(max-width:520px){
-
- 
-
-  .card{
-    padding:2rem 1.5rem;
-  }
-
- 
-
-  .logo{
-    font-size:1.7rem;
-  }
-
- 
-
+  .card{padding:32px 22px}
+  .logo{font-size:26px}
 }
-
- 
-
 </style>
 </head>
 
@@ -273,116 +195,44 @@ body{
 
  
 
-<!-- GLOW -->
 <div class="glow glow1"></div>
 <div class="glow glow2"></div>
 
  
 
-<!-- PARTICLES -->
-<script>
-
- 
-
-for(let i=0;i<55;i++){
-
- 
-
-  let s=document.createElement("div");
-
- 
-
-  s.className="spark";
-
- 
-
-  s.style.left=Math.random()*100+"%";
-  s.style.top=Math.random()*100+"%";
-
- 
-
-  s.style.animationDuration=(4+Math.random()*5)+"s";
-  s.style.animationDelay=(Math.random()*3)+"s";
-
- 
-
-  document.body.appendChild(s);
-
- 
-
-}
-
- 
-
-</script>
-
- 
-
-<!-- CARD -->
-
- 
-
 <div class="card">
-
- 
-
-  <div class="logo">
-    🚀 Download File Ready
-</div>
-
- 
-
-  <div class="sub">
-    secure download preparation
-</div>
+<div class="logo">🚀 Download <span>File Ready</span></div>
+<div class="sub">secure download preparation</div>
 
  
 
   <div class="circle-wrap">
-
- 
-
-    <div class="circle"></div>
-
- 
-
-    <div class="percent" id="percent">
-      0%
+<div class="circle"></div>
+<div class="percent" id="percent">0%</div>
 </div>
 
  
 
-  </div>
+  <div class="msg" id="msg">🧭 preparing secure route...</div>
+<div class="badge" id="badge">🟢 starting</div>
 
  
 
-  <div class="msg" id="msg">
-    🧭 preparing secure route...
+  <div class="note">Please wait while we prepare your secure download access.</div>
 </div>
-
- 
-
-  <div class="badge" id="badge">
-    🟢 starting
-</div>
-
- 
-
-  <div class="note">
-    Please wait while we prepare your secure download access.
-</div>
-
- 
-
-</div>
-
- 
-
-<!-- LOADER SCRIPT -->
 
  
 
 <script>
+for(let i=0;i<55;i++){
+  let s=document.createElement("div");
+  s.className="spark";
+  s.style.left=Math.random()*100+"%";
+  s.style.top=Math.random()*100+"%";
+  s.style.animationDuration=(4+Math.random()*5)+"s";
+  s.style.animationDelay=(Math.random()*3)+"s";
+  document.body.appendChild(s);
+}
 
  
 
@@ -396,110 +246,44 @@ const badge = document.getElementById("badge");
 
  
 
-/* FINAL REDIRECT PAGE */
-
- 
-
 const finalURL = "https://gadgetpilot.site/desire-file/";
 
  
 
-/* LOADING STEPS */
-
- 
-
 const steps = [
-
- 
-
   ["🧭 preparing secure route...", "🟢 starting"],
-
- 
-
   ["🔎 checking download path...", "📡 scanning"],
-
- 
-
   ["📦 locating setup package...", "📁 locating"],
-
- 
-
   ["🔑 validating secure access...", "🔐 verifying"],
-
- 
-
   ["⚙ optimizing connection...", "🔁 routing"],
-
- 
-
   ["🛡 securing transfer channel...", "🛡 protected"],
-
- 
-
   ["✅ access approved", "✔ approved"],
-
- 
-
   ["🚀 preparing redirect...", "⚡ finalizing"],
-
- 
-
   ["✨ redirecting now...", "➡ moving"]
-
- 
-
 ];
 
  
 
-/* RUN */
-
- 
-
 function runLoader(){
-
- 
-
   progress += Math.random() * 7;
 
  
 
   if(progress >= 100){
-
- 
-
     progress = 100;
-
- 
-
     percent.textContent = "100%";
-
- 
-
     msg.textContent = "✨ redirecting now...";
+    badge.textContent = "🚀 done";
 
  
 
-    badge.textContent = "⌛ done";
-
- 
-
-    setTimeout(()=>{
-
- 
-
+    setTimeout(function(){
       window.location.href = finalURL;
-
- 
-
     },1000);
 
  
 
     return;
-
- 
-
   }
 
  
@@ -509,12 +293,7 @@ function runLoader(){
  
 
   let i = Math.floor((progress / 100) * steps.length);
-
- 
-
-  if(i >= steps.length){
-    i = steps.length - 1;
-  }
+  if(i >= steps.length){i = steps.length - 1;}
 
  
 
@@ -524,17 +303,11 @@ function runLoader(){
  
 
   setTimeout(runLoader,140);
-
- 
-
 }
 
  
 
 runLoader();
-
- 
-
 </script>
 
  
