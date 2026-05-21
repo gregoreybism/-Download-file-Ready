@@ -10,6 +10,10 @@
 
  
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+ 
+
 <style>
 
  
@@ -23,16 +27,14 @@
  
 
 body{
-  font-family:Arial,sans-serif;
-  background:#02131f;
-  background-image:
-  radial-gradient(circle at top,#0f3b57 0%,#02131f 60%);
+  font-family:'Poppins',sans-serif;
+  background:radial-gradient(circle at top,#001f2e,#000);
   height:100vh;
-  overflow:hidden;
   display:flex;
   align-items:center;
   justify-content:center;
   color:#fff;
+  overflow:hidden;
   position:relative;
 }
 
@@ -48,8 +50,9 @@ body{
   height:6px;
   background:#38bdf8;
   border-radius:50%;
+  animation:rise 6s linear infinite;
   opacity:.7;
-  animation:rise linear infinite;
+  box-shadow:0 0 14px #38bdf8;
 }
 
  
@@ -62,7 +65,7 @@ body{
  
 
   to{
-    transform:translateY(-900px);
+    transform:translateY(-800px);
   }
 }
 
@@ -74,16 +77,15 @@ body{
 
 .card{
   width:360px;
-  max-width:92%;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(56,189,248,.25);
-  border-radius:22px;
-  padding:35px 25px;
+  padding:2.2rem;
   text-align:center;
-  box-shadow:0 0 40px rgba(56,189,248,.18);
-  backdrop-filter:blur(10px);
+  border-radius:20px;
+  background:rgba(56,189,248,.06);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(56,189,248,.25);
+  box-shadow:0 0 40px rgba(56,189,248,.22);
   position:relative;
-  z-index:10;
+  z-index:2;
 }
 
  
@@ -93,17 +95,17 @@ body{
  
 
 h1{
-  font-size:30px;
-  margin-bottom:6px;
-  color:#38bdf8;
+  font-size:1.7rem;
+  margin-bottom:5px;
+  color:#22c55e;
 }
 
  
 
 .sub{
-  font-size:14px;
-  color:#cbd5e1;
-  margin-bottom:30px;
+  font-size:.85rem;
+  color:#bae6fd;
+  margin-bottom:1.8rem;
 }
 
  
@@ -112,13 +114,21 @@ h1{
 
  
 
+.circle-wrap{
+  position:relative;
+  width:130px;
+  height:130px;
+  margin:0 auto 1.5rem;
+}
+
+ 
+
 .circle{
   width:130px;
   height:130px;
   border-radius:50%;
   border:6px solid rgba(255,255,255,.08);
-  border-top:6px solid #38bdf8;
-  margin:0 auto 24px;
+  border-top:6px solid #22c55e;
   animation:spin 1s linear infinite;
 }
 
@@ -132,15 +142,33 @@ h1{
 
  
 
+/* CENTER TEXT */
+
+ 
+
+.secured{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:1rem;
+  font-weight:600;
+  color:#bbf7d0;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+ 
+
 /* PERCENT */
 
  
 
 .percent{
-  font-size:38px;
-  font-weight:bold;
-  color:#7dd3fc;
-  margin-bottom:12px;
+  font-size:2.2rem;
+  font-weight:600;
+  color:#86efac;
+  margin-bottom:.5rem;
 }
 
  
@@ -150,8 +178,8 @@ h1{
  
 
 .msg{
-  font-size:15px;
-  margin-bottom:16px;
+  font-size:.95rem;
+  margin-bottom:1rem;
 }
 
  
@@ -162,12 +190,12 @@ h1{
 
 .badge{
   display:inline-block;
-  padding:7px 15px;
+  padding:6px 14px;
   border-radius:20px;
-  background:rgba(56,189,248,.14);
-  border:1px solid rgba(56,189,248,.25);
-  color:#bae6fd;
-  font-size:13px;
+  background:rgba(34,197,94,.15);
+  border:1px solid rgba(34,197,94,.3);
+  font-size:.8rem;
+  color:#bbf7d0;
 }
 
  
@@ -189,7 +217,7 @@ h1{
 
  
 
-for(let i=0;i<45;i++){
+for(let i=0;i<50;i++){
 
  
 
@@ -240,7 +268,29 @@ for(let i=0;i<45;i++){
 
  
 
-  <div class="circle"></div>
+  <!-- CIRCLE -->
+
+ 
+
+  <div class="circle-wrap">
+
+ 
+
+    <div class="circle"></div>
+
+ 
+
+    <div class="secured">
+      Secured
+</div>
+
+ 
+
+  </div>
+
+ 
+
+  <!-- TEXT -->
 
  
 
@@ -356,7 +406,7 @@ function run(){
 
  
 
-    setTimeout(function(){
+    setTimeout(()=>{
 
  
 
