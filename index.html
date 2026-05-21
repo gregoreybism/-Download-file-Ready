@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+
+<title>Download File Ready • Secure Download Access</title>
+
+ 
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+ 
+
+<style>
+
+ 
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+ 
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:
+    radial-gradient(circle at top,#031b2e,#020617 70%);
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  color:#fff;
+}
+
+ 
+
+/* PARTICLES */
+
+ 
+
+.spark{
+  position:absolute;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#38bdf8;
+  box-shadow:0 0 14px #38bdf8;
+  opacity:.7;
+  animation:rise linear infinite;
+}
+
+ 
+
+@keyframes rise{
+  from{
+    transform:translateY(0);
+    opacity:.8;
+  }
+
+ 
+
+  to{
+    transform:translateY(-850px);
+    opacity:0;
+  }
+}
+
+ 
+
+/* GLOW */
+
+ 
+
+.glow{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(100px);
+  opacity:.22;
+}
+
+ 
+
+.glow1{
+  width:260px;
+  height:260px;
+  background:#38bdf8;
+  top:-80px;
+  left:-80px;
+}
+
+ 
+
+.glow2{
+  width:260px;
+  height:260px;
+  background:#22c55e;
+  bottom:-100px;
+  right:-100px;
+}
+
+ 
+
+/* CARD */
+
+ 
+
+.card{
+  width:390px;
+  max-width:92%;
+  padding:2.5rem;
+  border-radius:26px;
+  text-align:center;
+  background:rgba(15,23,42,.68);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(56,189,248,.24);
+  box-shadow:
+    0 0 50px rgba(56,189,248,.16),
+    inset 0 0 20px rgba(255,255,255,.03);
+  position:relative;
+  z-index:5;
+}
+
+ 
+
+/* LOGO */
+
+ 
+
+.logo{
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:5px;
+  color:#38bdf8;
+}
+
+ 
+
+.logo span{
+  color:#22c55e;
+}
+
+ 
+
+.sub{
+  color:#bae6fd;
+  font-size:.88rem;
+  margin-bottom:2rem;
+}
+
+ 
+
+/* CIRCLE */
+
+ 
+
+.circle-wrap{
+  position:relative;
+  width:145px;
+  height:145px;
+  margin:0 auto 1.7rem;
+}
+
+ 
+
+.circle{
+  width:145px;
+  height:145px;
+  border-radius:50%;
+  border:6px solid rgba(255,255,255,.08);
+  border-top:6px solid #38bdf8;
+  border-right:6px solid #22c55e;
+  animation:spin 1s linear infinite;
+}
+
+ 
+
+@keyframes spin{
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+ 
+
+.percent{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2rem;
+  font-weight:700;
+  color:#e0f2fe;
+}
+
+ 
+
+/* TEXT */
+
+ 
+
+.msg{
+  font-size:.97rem;
+  margin-bottom:1rem;
+  color:#e2e8f0;
+}
+
+ 
+
+.badge{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:999px;
+  background:rgba(56,189,248,.12);
+  border:1px solid rgba(56,189,248,.28);
+  color:#bae6fd;
+  font-size:.82rem;
+  font-weight:600;
+}
+
+ 
+
+/* FOOT NOTE */
+
+ 
+
+.note{
+  margin-top:1.3rem;
+  font-size:.75rem;
+  color:#94a3b8;
+  line-height:1.7;
+}
+
+ 
+
+/* MOBILE */
+
+ 
+
+@media(max-width:520px){
+
+ 
+
+  .card{
+    padding:2rem 1.5rem;
+  }
+
+ 
+
+  .logo{
+    font-size:1.7rem;
+  }
+
+ 
+
+}
+
+ 
+
+</style>
+</head>
+
+ 
+
+<body>
+
+ 
+
+<!-- GLOW -->
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+ 
+
+<!-- PARTICLES -->
+<script>
+
+ 
+
+for(let i=0;i<55;i++){
+
+ 
+
+  let s=document.createElement("div");
+
+ 
+
+  s.className="spark";
+
+ 
+
+  s.style.left=Math.random()*100+"%";
+  s.style.top=Math.random()*100+"%";
+
+ 
+
+  s.style.animationDuration=(4+Math.random()*5)+"s";
+  s.style.animationDelay=(Math.random()*3)+"s";
+
+ 
+
+  document.body.appendChild(s);
+
+ 
+
+}
+
+ 
+
+</script>
+
+ 
+
+<!-- CARD -->
+
+ 
+
+<div class="card">
+
+ 
+
+  <div class="logo">
+    🚀 Download File Ready
+</div>
+
+ 
+
+  <div class="sub">
+    secure download preparation
+</div>
+
+ 
+
+  <div class="circle-wrap">
+
+ 
+
+    <div class="circle"></div>
+
+ 
+
+    <div class="percent" id="percent">
+      0%
+</div>
+
+ 
+
+  </div>
+
+ 
+
+  <div class="msg" id="msg">
+    🧭 preparing secure route...
+</div>
+
+ 
+
+  <div class="badge" id="badge">
+    🟢 starting
+</div>
+
+ 
+
+  <div class="note">
+    Please wait while we prepare your secure download access.
+</div>
+
+ 
+
+</div>
+
+ 
+
+<!-- LOADER SCRIPT -->
+
+ 
+
+<script>
+
+ 
+
+let progress = 0;
+
+ 
+
+const percent = document.getElementById("percent");
+const msg = document.getElementById("msg");
+const badge = document.getElementById("badge");
+
+ 
+
+/* FINAL REDIRECT PAGE */
+
+ 
+
+const finalURL = "https://gadgetpilot.site/desire-file/";
+
+ 
+
+/* LOADING STEPS */
+
+ 
+
+const steps = [
+
+ 
+
+  ["🧭 preparing secure route...", "🟢 starting"],
+
+ 
+
+  ["🔎 checking download path...", "📡 scanning"],
+
+ 
+
+  ["📦 locating setup package...", "📁 locating"],
+
+ 
+
+  ["🔑 validating secure access...", "🔐 verifying"],
+
+ 
+
+  ["⚙ optimizing connection...", "🔁 routing"],
+
+ 
+
+  ["🛡 securing transfer channel...", "🛡 protected"],
+
+ 
+
+  ["✅ access approved", "✔ approved"],
+
+ 
+
+  ["🚀 preparing redirect...", "⚡ finalizing"],
+
+ 
+
+  ["✨ redirecting now...", "➡ moving"]
+
+ 
+
+];
+
+ 
+
+/* RUN */
+
+ 
+
+function runLoader(){
+
+ 
+
+  progress += Math.random() * 7;
+
+ 
+
+  if(progress >= 100){
+
+ 
+
+    progress = 100;
+
+ 
+
+    percent.textContent = "100%";
+
+ 
+
+    msg.textContent = "✨ redirecting now...";
+
+ 
+
+    badge.textContent = "⌛ done";
+
+ 
+
+    setTimeout(()=>{
+
+ 
+
+      window.location.href = finalURL;
+
+ 
+
+    },1000);
+
+ 
+
+    return;
+
+ 
+
+  }
+
+ 
+
+  percent.textContent = Math.floor(progress) + "%";
+
+ 
+
+  let i = Math.floor((progress / 100) * steps.length);
+
+ 
+
+  if(i >= steps.length){
+    i = steps.length - 1;
+  }
+
+ 
+
+  msg.textContent = steps[i][0];
+  badge.textContent = steps[i][1];
+
+ 
+
+  setTimeout(runLoader,140);
+
+ 
+
+}
+
+ 
+
+runLoader();
+
+ 
+
+</script>
+
+ 
+
+</body>
+</html>
